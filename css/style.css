@@ -1,0 +1,352 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #ffffff;
+    color: #4a4a4a;
+    line-height: 1.8;
+}
+
+/* Header Styles */
+header {
+    background-color: #E9D7C9;
+    color: #4a4a4a;
+    text-align: center;
+    padding: 2rem 4rem 2rem 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1{
+    font-family: 'Playfair Display'; /* Playfair Display font */
+    font-size: 3.5rem; /* Large font size for the footer heading */
+    font-weight: lighter ;
+    margin-bottom: 1rem; /* Space below the footer title */
+    color: white;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #E9D7C9;
+    /* White background */
+    padding: 3rem 0 0 0;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4F5726;
+    /* Neutral gray */
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: #c48a6b;
+    /* Warm accent */
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -50%; /* Adjust this value to move the list to the left */
+    background-color: rgba(79, 87, 38, 0.7); /* Background with 70% opacity */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0.5rem 0;
+    z-index: 5;
+}
+
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    padding: 0.5rem 1rem;
+   
+}
+
+nav ul li ul li a {
+    color: #E9D7C9;
+}
+
+nav ul li ul li a:hover {
+    color: #c48a6b;
+}
+
+.lines1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Align lines horizontally at the center */
+    padding: 2rem;
+}
+
+.lines1 hr {
+    border: none; /* Removes any default border */
+    border-top: 2px solid #D7812A; /* Creates the orange horizontal line */
+    width: 100%; /* Adjusts the line width (can be customized) */
+    margin: 10px 0; /* Adds space between the lines */
+}
+
+
+
+/* Content Area */
+.main-content {
+    display: flex; /* Use flexbox for the main container */
+    flex-wrap: wrap; /* Allow wrapping of cards to the next row if necessary */
+    gap: 50px; /* Space between cards */
+    justify-content: center; /* Center align cards */
+    max-width: calc(100% - 100px); /* Account for padding (50px on each side) */
+    margin: 0 auto; /* Center content horizontally */
+    box-sizing: border-box;
+}
+
+/* Card Styling */
+.card {
+    background-color: #ffffff;
+    border-radius: 0 0 50px 50px; /* More rounded corners for larger cards */
+    overflow: hidden;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: flex-end; /* Ensure the bottom section stays at the bottom */
+    position: relative; /* For the pointy top */
+    flex: 1 1 calc((100% - 150px) / 3); /* Divide width equally for three cards */
+    max-width: calc((100% - 150px) / 3); /* Limit max width for responsiveness */
+    aspect-ratio: 415 / 820; /* Maintain the card's aspect ratio */
+    transition: all 0.3s ease;
+}
+
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.card img {
+    flex-grow: 1; /* Ensure the image takes all available vertical space */
+    width: 100%; /* Full width */
+    object-fit: cover; /* Ensure proportional cropping */
+    margin: 0;
+}
+
+/* Colored Bottom Section with h3 */
+.card h3 {
+    font-family: 'Playfair Display'; /* Playfair Display font */
+    font-size: 2rem; /* Large font size for the footer heading */
+    font-weight: lighter ;
+    /* font-size: 1.2rem; Larger text for larger cards */
+    color: white;
+    margin: 0;
+    height: 200px; /* Increased height for the bottom section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+    background-color: #ffffff; /* Default light pink background */
+    border-radius: 0 0 50px 50px; /* More rounded corners at the bottom */
+    flex-shrink: 0; /* Prevent the h3 from growing or shrinking */
+}
+
+.card.pink h3 {
+    background-color: #E49CA0; /* Light pink background */
+    color: white;
+}
+
+.card.green h3 {
+    background-color: #4F5726; /* Light green background */
+    color: white;
+}
+
+.card.yellow h3 {
+    background-color: #C6C45D; /* Light yellow background */
+    color: white;
+}
+
+
+.lines2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Align lines horizontally at the center */
+    padding: 2rem;
+}
+
+.lines2 hr {
+    border: none; /* Removes any default border */
+    border-top: 2px solid #4F5726; /* Creates the orange horizontal line */
+    width: 100%; /* Adjusts the line width (can be customized) */
+    margin: 10px 0; /* Adds space between the lines */
+}
+
+
+/* About Section */
+.about {
+    position: relative;
+    width: 100%;
+    height: 420px; /* Reduced height for smaller background */
+    margin: 6% auto; /* Add vertical space and center horizontally */
+    margin-bottom: 10%;
+}
+
+.about-section-content {
+    position: relative;
+    display: flex; /* Flexbox for side-by-side layout */
+    align-items: flex-start; /* Align items at the top */
+    justify-content: flex-start; /* Align content to the left */
+    height: 100%;
+    width: 100%;
+    background-color: #E2AF9C; /* Background color for the section */
+    border-radius: 0px; /* Optional for sharp edges */
+    padding-top: 3%; /* Add padding to the top */
+    padding-bottom: 3%; /* Add padding to the bottom */
+}
+
+.about-section-content img {
+    position: absolute;
+    height: 620px; /* Fixed height for the image */
+    width: 28%; /* Adjust width relative to the container */
+    left: 3%; /* Position image relative to container */
+    top: -60px; /* Adjust position to crop and align the image */
+    object-fit: cover; /* Ensure the image maintains its aspect ratio and crops */
+    border-radius: 0; /* Remove rounding for the image */
+    z-index: 2; /* Ensure the image is above the colored background */
+}
+
+.about-section-content div {
+    position: absolute;
+    left: 38%; /* Position text content to the right of the image */
+    top: 20%; /* Align the text content vertically */
+    width: 50%; /* Width for the heading */
+    color: #ffffff;
+    z-index: 1; /* Ensure the text remains behind the image */
+}
+
+.about-section-content h2 {
+    font-size: 2.5rem; /* Responsive font size */
+    font-family: 'Playfair Display';
+    font-weight: lighter;
+    line-height: 1.2; /* Adjust line height for better readability */
+    margin: 0 0 1rem 0; /* Add spacing below the heading */
+    text-align: left;
+    vertical-align: top;
+    color: #ffffff; /* White color for the heading */
+}
+
+.about-section-content p {
+    font-size: 1.4rem; /* Responsive font size */
+    font-family: 'Poppins regular';
+    line-height: 1.6; /* Improve readability */
+    font-weight: lighter;
+    text-align: left;
+    vertical-align: top;
+    color: #ffffff; /* White color for the paragraph */
+    width: 90%; /* Full width of the container */
+    height: auto; /* Allow the paragraph to expand as needed */
+    margin: 0; /* Remove default margins */
+}
+
+
+.lines3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Align lines horizontally at the center */
+    padding: 2rem;
+}
+
+.lines3 hr {
+    border: none; /* Removes any default border */
+    border-top: 2px solid #E49CA0; /* Creates the orange horizontal line */
+    width: 100%; /* Adjusts the line width (can be customized) */
+    margin: 10px 0; /* Adds space between the lines */
+}
+
+
+
+/* Footer Section */
+footer {
+    background-color: #E9D7C9; /* Soft beige background */
+    text-align: center; /* Center-align text and content */
+    padding: 2rem 0; /* Add padding to the top and bottom */
+    padding-top: 1rem;
+    color: #4a4a4a; /* Neutral gray text color */
+    font-family: 'Playfair Display', serif;
+}
+
+footer p {
+    font-size: 2rem; /* Large font size for the footer heading */
+    font-weight: bold;
+    font-family: 'Playfair Display'; /* Playfair Display font */
+    font-weight: lighter;
+    margin-bottom: 1rem; /* Space below the footer title */
+    color: white;
+}
+
+footer .footer-nav ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0% 25%; /* Remove padding */
+    padding-top: 3%;
+    padding-bottom: 3%;
+    display: flex; /* Use flexbox for navigation links */
+    justify-content: space-around; /* Center-align the links */
+    gap: 2rem; /* Add space between links */
+    margin-bottom: 2rem; /* Space below the navigation menu */
+}
+
+footer .footer-nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #4F5726; /* Neutral gray link color */
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+footer .footer-nav ul li a:hover {
+    color: #c48a6b; /* Warm accent on hover */
+}
+
+footer .social-media-icons {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Use flexbox for social links */
+    justify-content: center; /* Center-align the icons */
+    gap: 1rem; /* Add space between icons */
+    padding-bottom: 2rem;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        padding: 2rem 1rem;
+    }
+}
