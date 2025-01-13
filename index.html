@@ -10,18 +10,18 @@
 
 <body>
     <!-- Header Section -->
-    <header>
-        <h1>SIMPLY SCRUMPTIOUS</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li>
-                    <a href="#">Recipes</a>
-                    <ul>
-                        <li><a href="pancakes.html">Pancakes</a></li>
-                        <li><a href="brownies.html">Brownies</a></li>
-                        <li><a href="carbonara.html">Carbonara</a></li>
+    <header id="main-header">
+        <h1 class="site-title">SIMPLY SCRUMPTIOUS</h1>
+        <nav class="main-navigation">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Me</a></li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Recipes</a>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="pancakes.html" class="submenu-link">Pancakes</a></li>
+                        <li class="submenu-item"><a href="brownies.html" class="submenu-link">Brownies</a></li>
+                        <li class="submenu-item"><a href="carbonara.html" class="submenu-link">Carbonara</a></li>
                     </ul>
                 </li>
             </ul>
@@ -34,21 +34,21 @@
     </div>
 
     <!-- Featured Recipes Section -->
-    <main class="main-content">
-        <div class="card pink">
-            <img src="img/pancake3.jpg" alt="Fluffy Pancakes">
-            <h3>Fluffy Pancakes With Rooibos Syrup</h3>
+    <main id="featured-recipes">
+        <div class="recipe-card pink-card">
+            <img src="img/pancake3.jpg" alt="Fluffy Pancakes" class="recipe-image">
+            <h3 class="recipe-title">Fluffy Pancakes With Rooibos Syrup</h3>
         </div>
-        <div class="card green">
-            <img src="img/brownie1.jpg" alt="Fudgy Brownies">
-            <h3>Perfect Chocolate Fudgy Brownies</h3>
+        <div class="recipe-card green-card">
+            <img src="img/brownie1.jpg" alt="Fudgy Brownies" class="recipe-image">
+            <h3 class="recipe-title">Perfect Chocolate Fudgy Brownies</h3>
         </div>
-        <div class="card yellow">
-            <img src="img/carbonara1.jpg" alt="Creamy Carbonara">
-            <h3>Creamy Carbonara With Pancetta</h3>
+        <div class="recipe-card yellow-card">
+            <img src="img/carbonara1.jpg" alt="Creamy Carbonara" class="recipe-image">
+            <h3 class="recipe-title">Creamy Carbonara With Pancetta</h3>
         </div>
-
     </main>
+
 
     <div class="lines2">
         <hr>
@@ -56,12 +56,12 @@
     </div>
 
     <!-- About Section -->
-    <section class="about">
-        <div class="about-section-content">
-            <img src="img/profile.jpg" alt="Poppy's Profile Picture">
-            <div class="background">
-                <h2>Oh, hi! I'm Poppy</h2>
-                <p>
+    <section id="about-section">
+        <div class="about-content">
+            <img src="img/profile.jpg" alt="Poppy's Profile Picture" class="about-profile-picture">
+            <div class="about-description">
+                <h2 class="about-heading">Oh, hi! I'm Poppy</h2>
+                <p class="about-paragraph">
                     I'm the heart and soul behind Simply Scrumptious. I'm a 26-year-old chef from sunny South Africa,
                     and my kitchen is where nostalgia meets creativity.
                     I've always believed that the best meals are the ones that remind you of home, which is why I
@@ -73,28 +73,35 @@
 
 
 
+
     <div class="lines3">
         <hr>
         <hr>
     </div>
 
     <!-- Footer Section -->
-    <footer>
-        <p>SIMPLY SCRUMPTIOUS</p>
-        <div class = "footer-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+    <footer id="main-footer">
+        <p class="footer-title">SIMPLY SCRUMPTIOUS</p>
+        <div class="footer-navigation">
+            <ul class="footer-links">
+                <li class="footer-link-item"><a href="index.html" class="footer-link">Home</a></li>
+                <li class="footer-link-item"><a href="about.html" class="footer-link">About Me</a></li>
+                <li class="footer-link-item"><a href="recipes.html" class="footer-link">Recipes</a></li>
+                <li class="footer-link-item"><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
             </ul>
         </div>
-        <div class="social-media-icons">
-            <li><a href="https://tiktok.com" target="_blank"><img src="img/TikTok.png" alt="Twitter"></a></li>
-            <li><a href="https://facebook.com" target="_blank"><img src="img/Facebook.png" alt="Facebook"></a></li>
-            <li><a href="https://instagram.com" target="_blank"><img src="img/Instagram.png" alt="Instagram"></a></li>
-        <div>
+        <div class="social-media">
+            <ul class="social-media-list">
+                <li class="social-media-item"><a href="https://tiktok.com" target="_blank"><img src="img/TikTok.png"
+                            alt="TikTok"></a></li>
+                <li class="social-media-item"><a href="https://facebook.com" target="_blank"><img src="img/Facebook.png"
+                            alt="Facebook"></a></li>
+                <li class="social-media-item"><a href="https://instagram.com" target="_blank"><img
+                            src="img/Instagram.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
     </footer>
+
 
 </body>
 

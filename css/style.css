@@ -13,22 +13,24 @@ body {
 }
 
 /* Header Styles */
-header {
+#main-header {
     background-color: #E9D7C9;
     color: #4a4a4a;
     text-align: center;
-    padding: 2rem 4rem 2rem 2rem;
+    padding: 2rem;
     font-size: 2rem;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    /* Allow wrapping for smaller screens */
 }
 
-header h1 {
+.site-title {
     font-family: 'Playfair Display';
     /* Playfair Display font */
-    font-size: 3.5rem;
-    /* Large font size for the footer heading */
+    font-size: 2.5rem;
+    /* Adjusted font size for smaller screens */
     font-weight: lighter;
     margin-bottom: 1rem;
     /* Space below the footer title */
@@ -36,69 +38,72 @@ header h1 {
 }
 
 /* Navigation Menu */
-nav {
+.main-navigation {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    /* Center the navigation menu */
     background-color: #E9D7C9;
-    /* White background */
-    padding: 3rem 0 0 0;
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    padding: 1rem 0;
+    /* Adjusted padding for responsiveness */
+    flex-wrap: wrap;
+    /* Allow items to wrap for smaller screens */
 }
 
-nav ul {
+.nav-list {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
+    /* Adjusted gap for smaller screens */
+    flex-wrap: wrap;
+    /* Allow list items to wrap for smaller screens */
+    justify-content: center;
+    /* Center align list items */
 }
 
-nav ul li {
+.nav-item {
     position: relative;
 }
 
-nav ul li a {
+.nav-link {
     text-decoration: none;
     color: #4F5726;
-    /* Neutral gray */
     font-weight: bold;
     font-size: 1rem;
 }
 
-nav ul li a:hover {
+.nav-link:hover {
     color: #c48a6b;
-    /* Warm accent */
 }
 
-nav ul li ul {
+.submenu {
     display: none;
     position: absolute;
     top: 100%;
     left: -50%;
-    /* Adjust this value to move the list to the left */
     background-color: rgba(79, 87, 38, 0.7);
-    /* Background with 70% opacity */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     list-style: none;
     padding: 0.5rem 0;
     z-index: 5;
+    font-size: 1rem;
 }
 
-
-nav ul li:hover ul {
+.nav-item:hover .submenu {
     display: block;
 }
 
-nav ul li ul li {
+.submenu-item {
     padding: 0.5rem 1rem;
-
 }
 
-nav ul li ul li a {
+.submenu-link {
     color: #E9D7C9;
 }
 
-nav ul li ul li a:hover {
+.submenu-link:hover {
     color: #c48a6b;
 }
+
 
 .lines1 {
     display: flex;
@@ -122,106 +127,73 @@ nav ul li ul li a:hover {
 
 
 
-/* Content Area */
-.main-content {
+
+/* Featured Recipes Section */
+#featured-recipes {
     display: flex;
-    /* Use flexbox for the main container */
     flex-wrap: wrap;
-    /* Allow wrapping of cards to the next row if necessary */
-    gap: 50px;
-    /* Space between cards */
-    justify-content: center;
-    /* Center align cards */
-    max-width: calc(100% - 100px);
-    /* Account for padding (50px on each side) */
-    margin: 0 auto;
-    /* Center content horizontally */
+    gap: 50px; /* Space between cards */
+    justify-content: center; /* Center align cards */
+    max-width: calc(100% - 100px); /* Account for padding */
+    margin: 0 auto; /* Center content horizontally */
     box-sizing: border-box;
 }
 
-/* Card Styling */
-.card {
+/* Recipe Card Styling */
+.recipe-card {
     background-color: #ffffff;
     border-radius: 0 0 50px 50px;
-    /* More rounded corners for larger cards */
     overflow: hidden;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     text-align: center;
     display: flex;
     flex-direction: column;
-    /* Arrange content vertically */
     justify-content: flex-end;
-    /* Ensure the bottom section stays at the bottom */
     position: relative;
-    /* For the pointy top */
-    flex: 1 1 calc((100% - 150px) / 3);
-    /* Divide width equally for three cards */
-    max-width: calc((100% - 150px) / 3);
-    /* Limit max width for responsiveness */
-    aspect-ratio: 415 / 820;
-    /* Maintain the card's aspect ratio */
+    flex: 1 1 calc((100% - 150px) / 3); /* Divide width equally for three cards */
+    max-width: calc((100% - 150px) / 3); /* Limit max width for responsiveness */
+    aspect-ratio: 415 / 820; /* Maintain the card's aspect ratio */
     transition: all 0.3s ease;
 }
 
-
-/* Hover Effect */
-.card:hover {
+.recipe-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Image Styling */
-.card img {
+/* Recipe Image Styling */
+.recipe-image {
     flex-grow: 1;
-    /* Ensure the image takes all available vertical space */
-    width: 100%;
-    /* Full width */
-    object-fit: cover;
-    /* Ensure proportional cropping */
+    width: 100%; /* Full width */
+    object-fit: cover; /* Ensure proportional cropping */
     margin: 0;
 }
 
-/* Colored Bottom Section with h3 */
-.card h3 {
-    font-family: 'Playfair Display';
-    /* Playfair Display font */
+/* Recipe Title Styling */
+.recipe-title {
+    font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    /* Large font size for the footer heading */
     font-weight: lighter;
-    /* font-size: 1.2rem; Larger text for larger cards */
     color: white;
     margin: 0;
-    height: 200px;
-    /* Increased height for the bottom section */
+    height: 200px; /* Fixed height for the title section */
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: left;
     padding: 20px;
-    background-color: #ffffff;
-    /* Default light pink background */
     border-radius: 0 0 50px 50px;
-    /* More rounded corners at the bottom */
-    flex-shrink: 0;
-    /* Prevent the h3 from growing or shrinking */
 }
 
-.card.pink h3 {
-    background-color: #E49CA0;
-    /* Light pink background */
-    color: white;
+/* Card Background Colors */
+.pink-card .recipe-title {
+    background-color: #E49CA0; /* Light pink background */
 }
 
-.card.green h3 {
-    background-color: #4F5726;
-    /* Light green background */
-    color: white;
+.green-card .recipe-title {
+    background-color: #4F5726; /* Light green background */
 }
 
-.card.yellow h3 {
-    background-color: #C6C45D;
-    /* Light yellow background */
-    color: white;
+.yellow-card .recipe-title {
+    background-color: #C6C45D; /* Light yellow background */
 }
 
 
@@ -247,17 +219,16 @@ nav ul li ul li a:hover {
 
 
 /* About Section */
-.about {
+#about-section {
     position: relative;
     width: 100%;
-    height: 420px;
-    /* Reduced height for smaller background */
+    height: 420px; /* Reduced height for smaller background */
     margin: 6% auto;
     /* Add vertical space and center horizontally */
     margin-bottom: 10%;
 }
 
-.about-section-content {
+.about-content {
     position: relative;
     display: flex;
     /* Flexbox for side-by-side layout */
@@ -269,77 +240,48 @@ nav ul li ul li a:hover {
     width: 100%;
     background-color: #E2AF9C;
     /* Background color for the section */
-    border-radius: 0px;
-    /* Optional for sharp edges */
-    padding-top: 3%;
-    /* Add padding to the top */
-    padding-bottom: 3%;
-    /* Add padding to the bottom */
+    padding: 3% 0;
+    /* Add padding to the top and bottom */
 }
 
-.about-section-content img {
+.about-profile-picture {
     position: absolute;
-    height: 620px;
-    /* Fixed height for the image */
-    width: 28%;
-    /* Adjust width relative to the container */
-    left: 3%;
-    /* Position image relative to container */
-    top: -60px;
-    /* Adjust position to crop and align the image */
-    object-fit: cover;
-    /* Ensure the image maintains its aspect ratio and crops */
-    border-radius: 0;
-    /* Remove rounding for the image */
-    z-index: 2;
-    /* Ensure the image is above the colored background */
+    height: 620px; /* Fixed height for the image */
+    width: 28%; /* Adjust width relative to the container */
+    left: 3%; /* Position image relative to container */
+    top: -60px; /* Adjust position to crop and align the image */
+    object-fit: cover; /* Ensure the image maintains its aspect ratio and crops */
+    z-index: 2; /* Ensure the image is above the colored background */
 }
 
-.about-section-content div {
+.about-description {
     position: absolute;
-    left: 38%;
-    /* Position text content to the right of the image */
-    top: 20%;
-    /* Align the text content vertically */
+    left: 38%; /* Position text content to the right of the image */
+    top: 20%; /* Align the text content vertically */
     width: 50%;
-    /* Width for the heading */
     color: #ffffff;
-    z-index: 1;
-    /* Ensure the text remains behind the image */
+    z-index: 1; /* Ensure the text remains behind the image */
 }
 
-.about-section-content h2 {
-    font-size: 2.5rem;
-    /* Responsive font size */
-    font-family: 'Playfair Display';
+.about-heading {
+    font-size: 2.5rem; /* Responsive font size */
+    font-family: 'Playfair Display', serif;
     font-weight: lighter;
-    line-height: 1.2;
-    /* Adjust line height for better readability */
-    margin: 0 0 1rem 0;
-    /* Add spacing below the heading */
+    line-height: 1.2; /* Adjust line height for better readability */
+    margin: 0 0 1rem 0; /* Add spacing below the heading */
+    color: #ffffff; /* White color for the heading */
     text-align: left;
-    vertical-align: top;
-    color: #ffffff;
-    /* White color for the heading */
 }
 
-.about-section-content p {
-    font-size: 1.4rem;
-    /* Responsive font size */
-    font-family: 'Poppins regular';
-    line-height: 1.6;
-    /* Improve readability */
+.about-paragraph {
+    font-size: 1.4rem; /* Responsive font size */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6; /* Improve readability */
     font-weight: lighter;
     text-align: left;
-    vertical-align: top;
-    color: #ffffff;
-    /* White color for the paragraph */
-    width: 90%;
-    /* Full width of the container */
-    height: auto;
-    /* Allow the paragraph to expand as needed */
-    margin: 0;
-    /* Remove default margins */
+    color: #ffffff; /* White color for the paragraph */
+    width: 90%; /* Full width of the container */
+    margin: 0; /* Remove default margins */
 }
 
 
@@ -366,72 +308,52 @@ nav ul li ul li a:hover {
 
 
 /* Footer Section */
-footer {
-    background-color: #E9D7C9;
-    /* Soft beige background */
-    text-align: center;
-    /* Center-align text and content */
-    padding: 2rem 0;
-    /* Add padding to the top and bottom */
-    padding-top: 1rem;
-    color: #4a4a4a;
-    /* Neutral gray text color */
+#main-footer {
+    background-color: #E9D7C9; /* Soft beige background */
+    text-align: center; /* Center-align text and content */
+    padding: 2rem 0; /* Add padding to the top and bottom */
+    color: #4a4a4a; /* Neutral gray text color */
     font-family: 'Playfair Display', serif;
 }
 
-footer p {
-    font-size: 2rem;
-    /* Large font size for the footer heading */
-    font-weight: bold;
-    font-family: 'Playfair Display';
-    /* Playfair Display font */
-    font-weight: lighter;
-    margin-bottom: 1rem;
-    /* Space below the footer title */
+.footer-title {
+    font-size: 2rem; /* Large font size for the footer heading */
+    font-weight: lighter; /* Lighter weight for the title */
+    margin-bottom: 1rem; /* Space below the footer title */
     color: white;
 }
 
-footer .footer-nav ul {
-    list-style: none;
-    /* Remove default list styling */
-    padding: 0% 25%;
-    /* Remove padding */
-    padding-top: 3%;
-    padding-bottom: 3%;
-    display: flex;
-    /* Use flexbox for navigation links */
-    justify-content: space-around;
-    /* Center-align the links */
-    gap: 2rem;
-    /* Add space between links */
-    margin-bottom: 2rem;
-    /* Space below the navigation menu */
+.footer-navigation .footer-links {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Use flexbox for navigation links */
+    justify-content: center; /* Center-align the links */
+    gap: 2rem; /* Add space between links */
+    margin-bottom: 2rem; /* Space below the navigation menu */
+    padding: 0;
 }
 
-footer .footer-nav ul li a {
-    text-decoration: none;
-    /* Remove underline from links */
-    color: #4F5726;
-    /* Neutral gray link color */
+.footer-link {
+    text-decoration: none; /* Remove underline from links */
+    color: #4F5726; /* Neutral gray link color */
     font-size: 1rem;
     font-weight: bold;
 }
 
-footer .footer-nav ul li a:hover {
-    color: #c48a6b;
-    /* Warm accent on hover */
+.footer-link:hover {
+    color: #c48a6b; /* Warm accent on hover */
 }
 
-footer .social-media-icons {
-    list-style: none;
-    /* Remove default list styling */
-    display: flex;
-    /* Use flexbox for social links */
-    justify-content: center;
-    /* Center-align the icons */
-    gap: 1rem;
-    /* Add space between icons */
+.social-media .social-media-list {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Use flexbox for social links */
+    justify-content: center; /* Center-align the icons */
+    gap: 1rem; /* Add space between icons */
     padding-bottom: 2rem;
+}
+
+.social-media-item a img {
+    max-width: 2rem; /* Limit the icon size */
+    max-height: 2rem;
 }
 
 
@@ -440,229 +362,320 @@ footer .social-media-icons {
 /* About Section */
 .about-section {
     display: grid;
-    grid-template-columns: 25% 1fr; /* Image takes 25%, text takes remaining space */
+    grid-template-columns: 25% 1fr;
+    /* Image takes 25%, text takes remaining space */
     align-items: center;
-    background-color: #4F5726; /* Forest Green Background */
-    color: white; /* White text for contrast */
-    padding: 4rem 4rem; /* Adjusted padding for layout */
-    gap: 2rem; /* Adjusted space between image and text */
-  }
-  
-  .about-section img {
-    border-radius: 50%; /* Circular profile image */
-    width: 100%; /* Image adjusts to 25% of section width */
-    max-width: 350px; /* Maximum size limit */
-    height: 350px; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure image fits nicely */
-    justify-self: start; /* Align image to the left within its grid cell */
-  }
-  
-  .about-section .text-part {
+    background-color: #4F5726;
+    /* Forest Green Background */
+    color: white;
+    /* White text for contrast */
+    padding: 4rem 4rem;
+    /* Adjusted padding for layout */
+    gap: 2rem;
+    /* Adjusted space between image and text */
+}
+
+.about-section img {
+    border-radius: 50%;
+    /* Circular profile image */
+    width: 100%;
+    /* Image adjusts to 25% of section width */
+    max-width: 350px;
+    /* Maximum size limit */
+    height: 350px;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Ensure image fits nicely */
+    justify-self: start;
+    /* Align image to the left within its grid cell */
+}
+
+.about-section .text-part {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the text vertically */
-    text-align: left; /* Align text to the left */
+    justify-content: center;
+    /* Center the text vertically */
+    text-align: left;
+    /* Align text to the left */
     padding: 100px;
-  }
-  
-  .about-section .about-title {
-    font-size: 3.5rem; /* Increased font size for heading */
-    margin-bottom: 2rem; /* Space below heading */
+}
+
+.about-section .about-title {
+    font-size: 3.5rem;
+    /* Increased font size for heading */
+    margin-bottom: 2rem;
+    /* Space below heading */
     font-weight: bold;
-  }
-  
-  .about-section .about-details {
-    line-height: 1.9; /* Adjusted line spacing for readability */
-    margin-bottom: 1.5rem; /* Space between paragraphs */
-    font-size: 1.2rem; /* Slightly larger font size for text */
-  }  
+}
+
+.about-section .about-details {
+    line-height: 1.9;
+    /* Adjusted line spacing for readability */
+    margin-bottom: 1.5rem;
+    /* Space between paragraphs */
+    font-size: 1.2rem;
+    /* Slightly larger font size for text */
+}
 
 
- /* 404 Not Found Section */
+/* 404 Not Found Section */
 .notFound {
-    text-align: center; /* Center align all text */
-    padding: 5rem 2rem; /* Add spacing around content */
-    background-color: #4F5726; /* Green background */
-    color: #ffffff; /* White text color */
+    text-align: center;
+    /* Center align all text */
+    padding: 5rem 2rem;
+    /* Add spacing around content */
+    background-color: #4F5726;
+    /* Green background */
+    color: #ffffff;
+    /* White text color */
     height: 400px;
-  }
-  
-  .notFound .notFoundTitle {
-    font-size: 6rem; /* Larger font size for the 404 heading */
-    margin-bottom: 1.5rem; /* Space below heading */
+}
+
+.notFound .notFoundTitle {
+    font-size: 6rem;
+    /* Larger font size for the 404 heading */
+    margin-bottom: 1.5rem;
+    /* Space below heading */
     font-weight: bold;
-  }
-  
-  .notFound p {
-    font-size: 1.5rem; /* Larger font size for message */
-    margin-bottom: 2rem; /* Space below paragraph */
+}
+
+.notFound p {
+    font-size: 1.5rem;
+    /* Larger font size for message */
+    margin-bottom: 2rem;
+    /* Space below paragraph */
     font-weight: lighter;
 
-  }
-  
-  .notFound .backToHomeButton {
+}
+
+.notFound .backToHomeButton {
     margin-top: 2rem;
-    display: inline-block; /* Make the link a button-like element */
-    background-color: #E2AF9C; /* Darker green background for the button */
-    color: white; /* White text color */
-    padding: 1rem 2rem; /* Add padding for the button */
-    font-size: 1.2rem; /* Larger button text size */
-    text-decoration: none; /* Remove underline */
-    border-radius: 50px; /* Fully rounded button edges */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-  }
-  
-  .notFound .backToHomeButton:hover {
-    background-color: #f1a386; /* Even darker green on hover */
-  }
-  
+    display: inline-block;
+    /* Make the link a button-like element */
+    background-color: #E2AF9C;
+    /* Darker green background for the button */
+    color: white;
+    /* White text color */
+    padding: 1rem 2rem;
+    /* Add padding for the button */
+    font-size: 1.2rem;
+    /* Larger button text size */
+    text-decoration: none;
+    /* Remove underline */
+    border-radius: 50px;
+    /* Fully rounded button edges */
+    transition: background-color 0.3s ease;
+    /* Smooth hover effect */
+}
+
+.notFound .backToHomeButton:hover {
+    background-color: #f1a386;
+    /* Even darker green on hover */
+}
+
 
 
 
 /* Recipe Title and Images */
 .recipe-section .recipe-header {
-    text-align: left; /* Align title and ratings to the left */
-    padding: 3rem; /* Add more spacing around the section */
-    color: white; /* Dark brown text color */
+    text-align: left;
+    /* Align title and ratings to the left */
+    padding: 3rem;
+    /* Add more spacing around the section */
+    color: white;
+    /* Dark brown text color */
     background-color: #E49CA0;
 }
-  
-  .recipe-section .recipe-header .recipe-title {
-    font-size: 2rem; /* Larger font size for the title */
-    margin-bottom: 1rem; /* Space below the title */
+
+.recipe-section .recipe-header .recipe-title {
+    font-size: 2rem;
+    /* Larger font size for the title */
+    margin-bottom: 1rem;
+    /* Space below the title */
     font-weight: lighter;
-  }
-  
-  .recipe-section .recipe-header .recipe-ratings {
-    font-size: 1.5rem; /* Font size for the ratings */
-    color: white; /* Warm orange for the stars */
-    margin-bottom: 2rem; /* Space below the ratings */
-  }
-  
-  .recipe-section .recipe-header .recipe-images {
-    display: flex; /* Align images horizontally */
-    justify-content: space-around; /* Spread images across the width */
-  }
-  
-  .recipe-section .recipe-header .recipe-images img {
-    width: 300px; /* Increased width for images */
+}
+
+.recipe-section .recipe-header .recipe-ratings {
+    font-size: 1.5rem;
+    /* Font size for the ratings */
+    color: white;
+    /* Warm orange for the stars */
+    margin-bottom: 2rem;
+    /* Space below the ratings */
+}
+
+.recipe-section .recipe-header .recipe-images {
+    display: flex;
+    /* Align images horizontally */
+    justify-content: space-around;
+    /* Spread images across the width */
+}
+
+.recipe-section .recipe-header .recipe-images img {
+    width: 300px;
+    /* Increased width for images */
     height: 300px;
-    border-radius: 0px; /* More rounded corners for images */
-    object-fit: cover; /* Maintain image aspect ratio */
-  }
-  
-  /* Recipe Ingredients and Instructions */
-  .recipe-section .recipe-details {
-    display: flex; /* Align ingredients and instructions side by side */
-    justify-content: space-between; /* Distribute space between them */
-    gap: 2rem; /* Add space between columns */
-    padding: 3rem; /* Increased padding around the section */
+    border-radius: 0px;
+    /* More rounded corners for images */
+    object-fit: cover;
+    /* Maintain image aspect ratio */
+}
+
+/* Recipe Ingredients and Instructions */
+.recipe-section .recipe-details {
+    display: flex;
+    /* Align ingredients and instructions side by side */
+    justify-content: space-between;
+    /* Distribute space between them */
+    gap: 2rem;
+    /* Add space between columns */
+    padding: 3rem;
+    /* Increased padding around the section */
     background-color: #E49CA0;
     padding-bottom: 4rem;
-  }
-  
-  .recipe-section .recipe-details .recipe-ingredients,
-  .recipe-section .recipe-details .recipe-instructions {
-    flex: 1; /* Allow each column to take equal space */
-    background-color: #f8f9fa; /* Light gray background for sections */
-    padding: 2rem; /* Increased padding inside the columns */
-    border-radius: 20px; /* Rounded corners for sections */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-  }
-  
-  .recipe-section .recipe-details h3 {
-    font-size: 1.5rem; /* Larger font size for section titles */
-    color: #4f5726; /* Greenish color for headings */
-    margin-bottom: 1rem; /* More space below headings */
-  }
-  
-  .recipe-section .recipe-details ul,
-  .recipe-section .recipe-details ol {
-    font-size: 1rem; /* Slightly larger font size for list items */
-    color: #333333; /* Neutral color for text */
-    line-height: 1.5; /* Better spacing for readability */
-    padding-left: 2rem; /* Increased indent for list items */
-  }
-  
-  .recipe-section .recipe-details ul li,
-  .recipe-section .recipe-details ol li {
-    margin-bottom: 1rem; /* Increased spacing between list items */
-  }
-  
+}
 
-  #recipe-header-pancake ,#recipe-details-pancake{
+.recipe-section .recipe-details .recipe-ingredients,
+.recipe-section .recipe-details .recipe-instructions {
+    flex: 1;
+    /* Allow each column to take equal space */
+    background-color: #f8f9fa;
+    /* Light gray background for sections */
+    padding: 2rem;
+    /* Increased padding inside the columns */
+    border-radius: 20px;
+    /* Rounded corners for sections */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow effect */
+}
+
+.recipe-section .recipe-details h3 {
+    font-size: 1.5rem;
+    /* Larger font size for section titles */
+    color: #4f5726;
+    /* Greenish color for headings */
+    margin-bottom: 1rem;
+    /* More space below headings */
+}
+
+.recipe-section .recipe-details ul,
+.recipe-section .recipe-details ol {
+    font-size: 1rem;
+    /* Slightly larger font size for list items */
+    color: #333333;
+    /* Neutral color for text */
+    line-height: 1.5;
+    /* Better spacing for readability */
+    padding-left: 2rem;
+    /* Increased indent for list items */
+}
+
+.recipe-section .recipe-details ul li,
+.recipe-section .recipe-details ol li {
+    margin-bottom: 1rem;
+    /* Increased spacing between list items */
+}
+
+
+#recipe-header-pancake,
+#recipe-details-pancake {
     background-color: #E49CA0;
-  }
-  #recipe-header-brownie ,#recipe-details-brownie{
+}
+
+#recipe-header-brownie,
+#recipe-details-brownie {
     background-color: #D7812A;
-  }
-  #recipe-header-carbonara ,#recipe-details-carbonara{
+}
+
+#recipe-header-carbonara,
+#recipe-details-carbonara {
     background-color: #E2AF9C;
-  }
-  
+}
+
 
 /* Comment Section */
 .comment-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align all content */
-    margin:  4rem 5rem; /* Add spacing around the section */
-    background-color: #C6C45D; /* Green background for the container */
-    border-radius: 10px; /* Rounded corners for the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-  }
-  
-  .comment-title {
-    font-size: 2rem; /* Larger font size for the title */
-    color: #4F5726; /* White text for the title */
-    margin-bottom: 1rem; /* Space below the title */
+    align-items: center;
+    /* Center align all content */
+    margin: 4rem 5rem;
+    /* Add spacing around the section */
+    background-color: #C6C45D;
+    /* Green background for the container */
+    border-radius: 10px;
+    /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow effect */
+}
+
+.comment-title {
+    font-size: 2rem;
+    /* Larger font size for the title */
+    color: #4F5726;
+    /* White text for the title */
+    margin-bottom: 1rem;
+    /* Space below the title */
     margin-top: 1.5rem;
-    text-align: center; /* Center align the title text */
-  }
-  
-  .comment-form {
+    text-align: center;
+    /* Center align the title text */
+}
+
+.comment-form {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align form elements */
-    padding: 1rem; /* Add spacing inside the form */
+    align-items: center;
+    /* Center align form elements */
+    padding: 1rem;
+    /* Add spacing inside the form */
     padding-top: 0rem;
-    width: 100%; /* Full width of the parent container */
-    max-width: 500px; /* Limit maximum width */
-  }
-  
-  .comment-input {
-    width: 30%; /* Smaller width for the name input */
-    padding: 0.75rem; /* Add padding inside inputs */
-    border: none; /* Remove border */
-    border-radius: 25px; /* Rounded corners for inputs */
-    margin-bottom: 1.5rem; /* Space below inputs */
-    background-color: #ffffff; /* White background for inputs */
-    color: #333333; /* Dark text color */
-    height: 1rem; /* Fixed height for text input */
-  }
-  
-  .comment-textarea {
-    width: 100%; /* Full width of the form */
-    padding: 0.75rem; /* Add padding inside inputs */
-    border: none; /* Remove border */
-    border-radius: 25px; /* Rounded corners for inputs */
-    margin-bottom: 1.5rem; /* Space below inputs */
-    background-color: #ffffff; /* White background for inputs */
-    color: #333333; /* Dark text color */
-    height: 6rem; /* Larger height for textarea */
-    resize: none; /* Disable resizing */
-  }
-  
-  
-  
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .main-content {
-        grid-template-columns: 1fr;
-    }
-
-    .about {
-        padding: 2rem 1rem;
-    }
+    width: 100%;
+    /* Full width of the parent container */
+    max-width: 500px;
+    /* Limit maximum width */
 }
+
+.comment-input {
+    width: 30%;
+    /* Smaller width for the name input */
+    padding: 0.75rem;
+    /* Add padding inside inputs */
+    border: none;
+    /* Remove border */
+    border-radius: 25px;
+    /* Rounded corners for inputs */
+    margin-bottom: 1.5rem;
+    /* Space below inputs */
+    background-color: #ffffff;
+    /* White background for inputs */
+    color: #333333;
+    /* Dark text color */
+    height: 1rem;
+    /* Fixed height for text input */
+}
+
+.comment-textarea {
+    width: 100%;
+    /* Full width of the form */
+    padding: 0.75rem;
+    /* Add padding inside inputs */
+    border: none;
+    /* Remove border */
+    border-radius: 25px;
+    /* Rounded corners for inputs */
+    margin-bottom: 1.5rem;
+    /* Space below inputs */
+    background-color: #ffffff;
+    /* White background for inputs */
+    color: #333333;
+    /* Dark text color */
+    height: 6rem;
+    /* Larger height for textarea */
+    resize: none;
+    /* Disable resizing */
+}
+
+
+
+
+
