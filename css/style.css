@@ -153,6 +153,7 @@ body {
     max-width: calc((100% - 150px) / 3); /* Limit max width for responsiveness */
     aspect-ratio: 415 / 820; /* Maintain the card's aspect ratio */
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .recipe-card:hover {
@@ -478,120 +479,84 @@ body {
 
 /* Recipe Title and Images */
 .recipe-section .recipe-header {
-    text-align: left;
-    /* Align title and ratings to the left */
-    padding: 3rem;
-    /* Add more spacing around the section */
-    color: white;
-    /* Dark brown text color */
+    text-align: left; /* Align title and ratings to the left */
+    padding: 3rem; /* Add more spacing around the section */
+    color: white; /* Dark brown text color */
     background-color: #E49CA0;
 }
-
-.recipe-section .recipe-header .recipe-title {
-    font-size: 2rem;
-    /* Larger font size for the title */
-    margin-bottom: 1rem;
-    /* Space below the title */
+  
+  .recipe-section .recipe-header .recipe-section-title {
+    font-size: 2rem; /* Larger font size for the title */
+    margin-bottom: 1rem; /* Space below the title */
     font-weight: lighter;
-}
-
-.recipe-section .recipe-header .recipe-ratings {
-    font-size: 1.5rem;
-    /* Font size for the ratings */
-    color: white;
-    /* Warm orange for the stars */
-    margin-bottom: 2rem;
-    /* Space below the ratings */
-}
-
-.recipe-section .recipe-header .recipe-images {
-    display: flex;
-    /* Align images horizontally */
-    justify-content: space-around;
-    /* Spread images across the width */
-}
-
-.recipe-section .recipe-header .recipe-images img {
-    width: 300px;
-    /* Increased width for images */
+  }
+  
+  .recipe-section .recipe-header .recipe-ratings {
+    font-size: 1.5rem; /* Font size for the ratings */
+    color: white; /* Warm orange for the stars */
+    margin-bottom: 2rem; /* Space below the ratings */
+  }
+  
+  .recipe-section .recipe-header .recipe-images {
+    display: flex; /* Align images horizontally */
+    justify-content: space-around; /* Spread images across the width */
+  }
+  
+  .recipe-section .recipe-header .recipe-images img {
+    width: 300px; /* Increased width for images */
     height: 300px;
-    border-radius: 0px;
-    /* More rounded corners for images */
-    object-fit: cover;
-    /* Maintain image aspect ratio */
-}
-
-/* Recipe Ingredients and Instructions */
-.recipe-section .recipe-details {
-    display: flex;
-    /* Align ingredients and instructions side by side */
-    justify-content: space-between;
-    /* Distribute space between them */
-    gap: 2rem;
-    /* Add space between columns */
-    padding: 3rem;
-    /* Increased padding around the section */
+    border-radius: 0px; /* More rounded corners for images */
+    object-fit: cover; /* Maintain image aspect ratio */
+  }
+  
+  /* Recipe Ingredients and Instructions */
+  .recipe-section .recipe-details {
+    display: flex; /* Align ingredients and instructions side by side */
+    justify-content: space-between; /* Distribute space between them */
+    gap: 2rem; /* Add space between columns */
+    padding: 3rem; /* Increased padding around the section */
     background-color: #E49CA0;
     padding-bottom: 4rem;
-}
+  }
+  
+  .recipe-section .recipe-details .recipe-ingredients,
+  .recipe-section .recipe-details .recipe-instructions {
+    flex: 1; /* Allow each column to take equal space */
+    background-color: #f8f9fa; /* Light gray background for sections */
+    padding: 2rem; /* Increased padding inside the columns */
+    border-radius: 20px; /* Rounded corners for sections */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+  
+  .recipe-section .recipe-details h3 {
+    font-size: 1.5rem; /* Larger font size for section titles */
+    color: #4f5726; /* Greenish color for headings */
+    margin-bottom: 1rem; /* More space below headings */
+  }
+  
+  .recipe-section .recipe-details ul,
+  .recipe-section .recipe-details ol {
+    font-size: 1rem; /* Slightly larger font size for list items */
+    color: #333333; /* Neutral color for text */
+    line-height: 1.5; /* Better spacing for readability */
+    padding-left: 2rem; /* Increased indent for list items */
+  }
+  
+  .recipe-section .recipe-details ul li,
+  .recipe-section .recipe-details ol li {
+    margin-bottom: 1rem; /* Increased spacing between list items */
+  }
+  
 
-.recipe-section .recipe-details .recipe-ingredients,
-.recipe-section .recipe-details .recipe-instructions {
-    flex: 1;
-    /* Allow each column to take equal space */
-    background-color: #f8f9fa;
-    /* Light gray background for sections */
-    padding: 2rem;
-    /* Increased padding inside the columns */
-    border-radius: 20px;
-    /* Rounded corners for sections */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow effect */
-}
-
-.recipe-section .recipe-details h3 {
-    font-size: 1.5rem;
-    /* Larger font size for section titles */
-    color: #4f5726;
-    /* Greenish color for headings */
-    margin-bottom: 1rem;
-    /* More space below headings */
-}
-
-.recipe-section .recipe-details ul,
-.recipe-section .recipe-details ol {
-    font-size: 1rem;
-    /* Slightly larger font size for list items */
-    color: #333333;
-    /* Neutral color for text */
-    line-height: 1.5;
-    /* Better spacing for readability */
-    padding-left: 2rem;
-    /* Increased indent for list items */
-}
-
-.recipe-section .recipe-details ul li,
-.recipe-section .recipe-details ol li {
-    margin-bottom: 1rem;
-    /* Increased spacing between list items */
-}
-
-
-#recipe-header-pancake,
-#recipe-details-pancake {
+  #recipe-header-pancake ,#recipe-details-pancake{
     background-color: #E49CA0;
-}
-
-#recipe-header-brownie,
-#recipe-details-brownie {
+  }
+  #recipe-header-brownie ,#recipe-details-brownie{
     background-color: #D7812A;
-}
-
-#recipe-header-carbonara,
-#recipe-details-carbonara {
+  }
+  #recipe-header-carbonara ,#recipe-details-carbonara{
     background-color: #E2AF9C;
-}
-
+  }
 
 /* Comment Section */
 .comment-container {
