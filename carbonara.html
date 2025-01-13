@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creamy Carbonara with Pancetta - Simply Scrumptious</title>
 </head>
+
 <body>
     <!-- Header Section -->
     <header>
-        <h1>Simply Scrumptious</h1>
+        <h1>SIMPLY SCRUMPTIOUS</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
+                <li>
+                    <a href="#">Recipes</a>
+                    <ul>
+                        <li><a href="pancakes.html">Pancakes</a></li>
+                        <li><a href="brownies.html">Brownies</a></li>
+                        <li><a href="carbonara.html">Carbonara</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
 
+    <div class="lines1">
+        <hr>
+        <hr>
+    </div>
+
+
     <!-- Recipe Title and Images -->
-    <main>
-        <section>
-            <h2>Creamy Carbonara with Pancetta</h2>
-            <p>★★★★★</p>
-            <div>
-                <img src="img/carbonara1.jpg" alt="Carbonara Image 1" width="200" height="200">
-                <img src="img/carbonara2.jpg" alt="Carbonara Image 2"width="200" height="200">
-                <img src="img/carbonara3.jpg" alt="Carbonara Image 3"width="200" height="200">
+    <main class="recipe-section">
+        <section class="recipe-header" id="recipe-header-carbonara">
+            <h2 class="recipe-title">Creamy Carbonara with Pancetta</h2>
+            <p class="recipe-ratings">★★★★★</p>
+            <div class="recipe-images">
+                <img src="img/carbonara1.jpg" alt="Carbonara Image 1">
+                <img src="img/carbonara2.jpg" alt="Carbonara Image 2">
+                <img src="img/carbonara3.jpg" alt="Carbonara Image 3">
             </div>
         </section>
 
         <!-- Ingredients and Instructions -->
-        <section>
-            <div>
+        <section class="recipe-details" id="recipe-details-carbonara">
+            <div class="recipe-ingredients">
                 <h3>Ingredients</h3>
                 <ul>
                     <li>400g spaghetti</li>
@@ -45,50 +61,64 @@
                     <li>Chopped parsley (for garnish)</li>
                 </ul>
             </div>
-            <div>
+            <div class="recipe-instructions">
                 <h3>Instructions</h3>
                 <ol>
-                    <li>Bring a large pot of salted water to a boil and cook spaghetti according to package instructions. Reserve 1 cup of pasta water and drain the rest.</li>
+                    <li>Bring a large pot of salted water to a boil and cook spaghetti according to package
+                        instructions. Reserve 1 cup of pasta water and drain the rest.</li>
                     <li>In a bowl, whisk together eggs and grated Parmesan cheese until smooth.</li>
                     <li>Heat olive oil in a large skillet over medium heat. Add pancetta and cook until crispy.</li>
                     <li>Add minced garlic to the skillet and cook for 1 minute until fragrant.</li>
-                    <li>Reduce the heat to low and add the drained spaghetti to the skillet. Toss to combine with the pancetta and garlic.</li>
-                    <li>Remove the skillet from heat and quickly mix in the egg and Parmesan mixture, stirring constantly to create a creamy sauce. Add reserved pasta water as needed to adjust the consistency.</li>
+                    <li>Reduce the heat to low and add the drained spaghetti to the skillet. Toss to combine with the
+                        pancetta and garlic.</li>
+                    <li>Remove the skillet from heat and quickly mix in the egg and Parmesan mixture, stirring
+                        constantly to create a creamy sauce. Add reserved pasta water as needed to adjust the
+                        consistency.</li>
                     <li>Season with salt and pepper to taste.</li>
                     <li>Garnish with chopped parsley and serve immediately.</li>
                 </ol>
             </div>
         </section>
-
-        <!-- Comment Section -->
-        <section>
-            <h3>Leave A Comment</h3>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
-                <label for="comment">Comment:</label>
-                <textarea id="comment" name="comment"></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
     </main>
+
+
+    <div class="lines2">
+        <hr>
+        <hr>
+    </div>
+
+    <!-- Comment Section -->
+    <section class="comment-container">
+        <h3 class="comment-title">Leave A Comment</h3>
+        <form class="comment-form">
+            <textarea class="comment-input" id="name" >Name</textarea>
+            <textarea class="comment-textarea" id="comment" >Comment</textarea>
+        </form>
+    </section>
+
+
+    <div class="lines2">
+        <hr>
+        <hr>
+    </div>
 
     <!-- Footer Section -->
     <footer>
-        <p>Simply Scrumptious</p>
-        <nav>
+        <p>SIMPLY SCRUMPTIOUS</p>
+        <div class="footer-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="recipes.html">Recipes</a></li>
                 <li><a href="privacy-policy.html">Privacy Policy</a></li>
             </ul>
-        </nav>
-        <ul>
-            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-        </ul>
+        </div>
+        <div class="social-media-icons">
+            <li><a href="https://tiktok.com" target="_blank"><img src="img/TikTok.png" alt="Twitter"></a></li>
+            <li><a href="https://facebook.com" target="_blank"><img src="img/Facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://instagram.com" target="_blank"><img src="img/Instagram.png" alt="Instagram"></a></li>
+            <div>
     </footer>
 </body>
+
 </html>

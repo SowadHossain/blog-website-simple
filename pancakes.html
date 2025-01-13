@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fluffy Pancakes with Rooibos Syrup - Simply Scrumptious</title>
 </head>
+
 <body>
     <!-- Header Section -->
     <header>
-        <h1>Simply Scrumptious</h1>
+        <h1>SIMPLY SCRUMPTIOUS</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
+                <li>
+                    <a href="#">Recipes</a>
+                    <ul>
+                        <li><a href="pancakes.html">Pancakes</a></li>
+                        <li><a href="brownies.html">Brownies</a></li>
+                        <li><a href="carbonara.html">Carbonara</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
 
+    <div class="lines1">
+        <hr>
+        <hr>
+    </div>
+
+
     <!-- Recipe Title and Images -->
-    <main>
-        <section>
-            <h2>Fluffy Pancakes with Rooibos Syrup</h2>
-            <p>★★★★★</p>
-            <div>
-                <img src="img/pancake2.jpg" alt="Pancakes Image 2" width="200" height="200">
-                <img src="img/pancake1.jpg" alt="Pancakes Image 1" width="200" height="200">
-                <img src="img/pancake3.jpg" alt="Pancakes Image 3" width="200" height="200">
+    <main class="recipe-section" id="recipe-header-pancake">
+        <section class="recipe-header">
+            <h2 class="recipe-title">Fluffy Pancakes with Rooibos Syrup</h2>
+            <p class="recipe-ratings">★★★★★</p>
+            <div class="recipe-images">
+                <img src="img/pancake2.jpg" alt="Pancakes Image 2">
+                <img src="img/pancake1.jpg" alt="Pancakes Image 1">
+                <img src="img/pancake3.jpg" alt="Pancakes Image 3">
             </div>
         </section>
 
         <!-- Ingredients and Instructions -->
-        <section>
-            <div>
+        <section class="recipe-details" id="recipe-details-pancake">
+            <div class="recipe-ingredients">
                 <h3>Ingredients</h3>
                 <ul>
                     <li>1 ½ cups all-purpose flour</li>
@@ -46,49 +62,61 @@
                     <li>1 tsp vanilla extract</li>
                 </ul>
             </div>
-            <div>
+            <div class="recipe-instructions">
                 <h3>Instructions</h3>
                 <ol>
                     <li>In a large bowl, whisk together flour, sugar, baking powder, baking soda, and salt.</li>
                     <li>In another bowl, mix buttermilk, eggs, melted butter, and vanilla extract.</li>
-                    <li>Pour the wet ingredients into the dry ingredients and mix until just combined. Do not overmix.</li>
+                    <li>Pour the wet ingredients into the dry ingredients and mix until just combined. Do not overmix.
+                    </li>
                     <li>Heat a non-stick skillet over medium heat and grease it lightly.</li>
-                    <li>Pour ¼ cup batter for each pancake onto the skillet. Cook until bubbles form on the surface and the edges are set.</li>
+                    <li>Pour ¼ cup batter for each pancake onto the skillet. Cook until bubbles form on the surface and
+                        the edges are set.</li>
                     <li>Flip the pancakes and cook until golden brown. Repeat for remaining batter.</li>
                     <li>Serve with Rooibos Syrup and fresh fruit of your choice.</li>
                 </ol>
             </div>
         </section>
-
-        <!-- Comment Section -->
-        <section>
-            <h3>Leave A Comment</h3>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
-                <label for="comment">Comment:</label>
-                <textarea id="comment" name="comment"></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
     </main>
+
+
+    <div class="lines2">
+        <hr>
+        <hr>
+    </div>
+
+    <!-- Comment Section -->
+    <section class="comment-container">
+        <h3 class="comment-title">Leave A Comment</h3>
+        <form class="comment-form">
+            <textarea class="comment-input" id="name">Name</textarea>
+            <textarea class="comment-textarea" id="comment">Comment</textarea>
+        </form>
+    </section>
+
+
+    <div class="lines2">
+        <hr>
+        <hr>
+    </div>
 
     <!-- Footer Section -->
     <footer>
-        <p>Simply Scrumptious</p>
-        <nav>
+        <p>SIMPLY SCRUMPTIOUS</p>
+        <div class="footer-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="recipes.html">Recipes</a></li>
                 <li><a href="privacy-policy.html">Privacy Policy</a></li>
             </ul>
-        </nav>
-        <ul>
-            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-        </ul>
+        </div>
+        <div class="social-media-icons">
+            <li><a href="https://tiktok.com" target="_blank"><img src="img/TikTok.png" alt="Twitter"></a></li>
+            <li><a href="https://facebook.com" target="_blank"><img src="img/Facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://instagram.com" target="_blank"><img src="img/Instagram.png" alt="Instagram"></a></li>
+            <div>
     </footer>
 </body>
+
 </html>
