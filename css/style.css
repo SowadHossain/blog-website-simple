@@ -617,6 +617,7 @@ body {
     /* Dark text color */
     height: 1rem;
     /* Fixed height for text input */
+    resize: none;
 }
 
 .comment-textarea {
