@@ -1,0 +1,88 @@
+body {
+  font-family: 'Playfair Display';
+  background-color: #f9f2ed;
+}
+
+h1 {
+  color: #964b00;
+}
+
+h2 {
+  color: #457b1a;
+}
+
+p {
+  color: #555555;
+}
+
+.navbar {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --------------------------------------------------- */
+/* Circular Image */
+/* --------------------------------------------------- */
+.img-fixed {
+  width: 400px; /* Fixed width for the image */
+  height: 400px; /* Fixed height for the image */
+  object-fit: cover; /* Ensures the image fits the container without distortion */
+  border-radius: 50%; /* Makes the image perfectly circular */
+}
+
+/* --------------------------------------------------- */
+/* Full-Width Button */
+/* --------------------------------------------------- */
+.full-width-button {
+  height: 200px; /* Fixed height for the button */
+  font-size: 1.5rem; /* Large font size for button text */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Centers text vertically */
+  justify-content: center; /* Centers text horizontally */
+}
+
+/* --------------------------------------------------- */
+/* Navbar */
+/* --------------------------------------------------- */
+.navbar {
+  background-color: #E9D7C9; /* Light beige background for the navbar */
+  font-weight: lighter; /* Lighter font for a soft look */
+  font-family: 'Playfair Display'; /* Elegant serif font */
+}
+
+.navbar-brand {
+  font-size: 2rem; /* Large font size for the brand name */
+  font-weight: lighter; /* Lighter font style */
+  font-family: 'Playfair Display'; /* Matches the navbar font */
+  color: #ffffff; /* White text color */
+}
+
+/* --------------------------------------------------- */
+/* Explore My Blog Button */
+/* --------------------------------------------------- */
+.explore-my-blog-btn {
+  background-color: #D7812A; /* Orange button background */
+  font-weight: lighter; /* Lighter font for the text */
+  height: 200px; /* Fixed height for the button */
+  font-size: 1.5rem; /* Large font size */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Centers content vertically */
+  justify-content: flex-end; /* Aligns content to the right */
+  padding-right: 20px; /* Adds spacing on the right */
+  border-radius: 0; /* Removes rounded corners */
+  gap: 10px; /* Space between text and other elements (e.g., icons) */
+}
+
+
+/* Disable hover effect */
+.explore-my-blog-btn:hover {
+  background-color: #D7812A; /* Keeps the same background color */
+  color: white; /* Keeps the same text color */
+  text-decoration: none; /* Ensures no underline appears */
+  cursor: pointer; /* Optional: Prevents the pointer from changing to a hand */
+}
+
+
+.email-btn:hover{
+  color: #4F5726;
+}

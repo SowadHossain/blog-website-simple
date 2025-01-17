@@ -1,0 +1,718 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    font-family: 'Playfair Display';
+    background-color: #ffffff;
+    color: #4a4a4a;
+    line-height: 1.8;
+}
+
+
+/* Typography */
+/* Headings: Playfair Display */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px; /* Largest heading size */
+    font-weight: 700; /* Bold */
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px; /* Second largest heading */
+    font-weight: 700; /* Bold */
+    line-height: 1.2;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 700; /* Bold */
+    line-height: 1.3;
+}
+
+h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700; /* Bold */
+    line-height: 1.3;
+}
+
+h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700; /* Bold */
+    line-height: 1.4;
+}
+
+/* Subheadings: Poppins Semi-Bold */
+.subheading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* Base subheading size */
+    font-weight: 600; /* Semi-Bold */
+    line-height: 1.4;
+}
+
+.subheading-small {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px; /* Smaller subheading */
+    font-weight: 600; /* Semi-Bold */
+    line-height: 1.4;
+}
+
+/* Body Text: Poppins Regular */
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px; /* Base body text size */
+    font-weight: 400; /* Regular weight */
+    line-height: 1.6; /* Comfortable readability */
+    color: #333333; /* Default body text color */
+}
+
+p.large {
+    font-size: 24px; /* Larger body text */
+    font-weight: 400; /* Regular weight */
+    line-height: 1.6;
+}
+
+p.small {
+    font-size: 10px; /* Smallest body text */
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+/* Header Styles */
+#main-header {
+    background-color: #E9D7C9;
+    color: #4a4a4a;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.site-title {
+    font-family: 'Playfair Display';
+    font-size: 2.5rem;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+/* --------------------------------------------------- */
+/* Navigation Menu */
+/* --------------------------------------------------- */
+.main-navigation {
+    display: flex;
+    justify-content: center; /* Centers the navigation menu */
+    background-color: #E9D7C9; /* Light beige background color */
+    padding: 1rem 0; /* Adds spacing around the menu */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.nav-list {
+    list-style: none; /* Removes default list styles */
+    display: flex; /* Aligns items horizontally */
+    gap: 1.5rem; /* Adds spacing between menu items */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: center; /* Centers the navigation items */
+}
+
+.nav-item {
+    position: relative; /* Needed for submenu positioning */
+}
+
+.nav-link {
+    text-decoration: none; /* Removes underline */
+    color: #4F5726; /* Dark green text color */
+    font-weight: bold; /* Makes the text bold */
+    font-size: 1rem; /* Sets a readable font size */
+}
+
+.nav-link:hover {
+    color: #c48a6b; /* Changes color on hover */
+}
+
+/* --------------------------------------------------- */
+/* Submenu */
+/* --------------------------------------------------- */
+.submenu {
+    display: none; /* Hides submenu by default */
+    position: absolute; /* Positions submenu relative to parent */
+    top: 100%; /* Places submenu below the parent */
+    left: -50%; /* Aligns submenu to the center */
+    background-color: rgba(79, 87, 38, 0.7); /* Semi-transparent green background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+    list-style: none; /* Removes default list styles */
+    padding: 0.5rem 0; /* Adds spacing inside submenu */
+    z-index: 5; /* Ensures submenu is above other elements */
+    font-size: 1rem; /* Sets font size */
+}
+
+.nav-item:hover .submenu {
+    display: block; /* Displays submenu on hover */
+}
+
+.submenu-item {
+    padding: 0.5rem 1rem; /* Adds spacing inside submenu items */
+}
+
+.submenu-link {
+    color: #E9D7C9; /* Light beige text color */
+    text-decoration: none;
+}
+
+.submenu-link:hover {
+    color: #F5F5F5; /* Changes color on hover */
+}
+
+/* --------------------------------------------------- */
+/* Divider Lines Section */
+/* --------------------------------------------------- */
+.lines1 {
+    display: flex; /* Enables flexbox for alignment */
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    padding: 4rem; /* Adds space around the section */
+}
+
+.lines1 hr {
+    border: none; /* Removes default border styling */
+    border-top: 2px solid #D7812A; /* Orange line */
+    width: 100%; /* Full-width line */
+    margin: 10px 0; /* Adds spacing around the line */
+}
+
+
+
+
+/* --------------------------------------------------- */
+/* Featured Recipes Section */
+/* --------------------------------------------------- */
+#featured-recipes {
+    display: flex; /* Enables flexbox for layout */
+    flex-wrap: wrap; /* Allows wrapping for responsiveness */
+    gap: 50px; /* Space between recipe cards */
+    justify-content: center; /* Centers the cards */
+    max-width: calc(100% - 100px); /* Limits the section's width */
+    margin: 0 auto; /* Centers the section horizontally */
+    box-sizing: border-box; /* Includes padding and border in size calculations */
+}
+
+/* --------------------------------------------------- */
+/* Recipe Card Styling */
+/* --------------------------------------------------- */
+.recipe-card {
+    background-color: #ffffff; /* White card background */
+    border-radius: 0 0 50px 50px; /* Rounded bottom corners */
+    overflow: hidden; /* Ensures content stays within the card */
+    text-align: center; /* Centers text inside the card */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: flex-end; /* Aligns content to the bottom */
+    position: relative; /* Needed for positioning child elements */
+    flex: 1 1 calc((100% - 150px) / 3); /* Responsive width for 3 cards */
+    max-width: calc((100% - 150px) / 3); /* Limits maximum width for cards */
+    aspect-ratio: 415 / 820; /* Ensures consistent card proportions */
+    transition: all 0.3s ease; /* Smooth hover effect */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px); /* Moves the card slightly upwards */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adds shadow on hover */
+}
+
+/* --------------------------------------------------- */
+/* Recipe Image Styling */
+/* --------------------------------------------------- */
+.recipe-image {
+    flex-grow: 1; /* Ensures the image takes up available space */
+    width: 100%; /* Full width of the card */
+    object-fit: cover; /* Keeps image aspect ratio */
+    margin: 0; /* Removes default margins */
+}
+
+/* --------------------------------------------------- */
+/* Recipe Title Styling */
+/* --------------------------------------------------- */
+.recipe-title {
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    font-size: 2rem; /* Large, readable font size */
+    font-weight: lighter; /* Lighter text appearance */
+    color: white; /* White text color */
+    margin: 0; /* Removes default margins */
+    height: 200px; /* Fixed height for the title area */
+    display: flex; /* Flexbox for centering text */
+    align-items: center; /* Centers text vertically */
+    justify-content: center; /* Centers text horizontally */
+    padding: 20px; /* Adds spacing inside the title area */
+    border-radius: 0 0 50px 50px; /* Matches card bottom corners */
+}
+
+/* --------------------------------------------------- */
+/* Card Background Colors */
+/* --------------------------------------------------- */
+.pink-card .recipe-title {
+    background-color: #E49CA0; /* Light pink background for titles */
+}
+
+.green-card .recipe-title {
+    background-color: #4F5726; /* Light green background for titles */
+}
+
+.yellow-card .recipe-title {
+    background-color: #C6C45D; /* Light yellow background for titles */
+}
+
+/* --------------------------------------------------- */
+/* Divider Lines Section */
+/* --------------------------------------------------- */
+.lines2 {
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks elements vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    padding: 4rem; /* Adds space around the section */
+}
+
+.lines2 hr {
+    border: none; /* Removes default border styling */
+    border-top: 2px solid #4F5726; /* Green line */
+    width: 100%; /* Full-width line */
+    margin: 10px 0; /* Adds spacing around the line */
+}
+
+/* --------------------------------------------------- */
+/* About Section */
+/* --------------------------------------------------- */
+#about-section {
+    position: relative; /* Allows precise positioning of child elements */
+    width: 100%; /* Full-width section */
+    height: 420px; /* Fixed height for the section */
+    margin: 6% auto; /* Centers the section with vertical margin */
+    margin-bottom: 10%; /* Extra spacing at the bottom */
+}
+
+.about-content {
+    position: relative; /* Allows positioning within the section */
+    display: flex; /* Flexbox for layout */
+    align-items: flex-start; /* Aligns items at the start vertically */
+    justify-content: flex-start; /* Aligns items to the start horizontally */
+    height: 100%; /* Matches the parent section height */
+    width: 100%; /* Full width */
+    background-color: #E2AF9C; /* Light pink background */
+    padding: 3% 0; /* Adds vertical padding */
+}
+
+.about-profile-picture {
+    position: absolute; /* Positioned relative to the parent */
+    height: 620px; /* Fixed height for the image */
+    width: 28%; /* Takes up 28% of the width */
+    left: 3%; /* Moves the image slightly to the left */
+    top: -60px; /* Moves the image slightly upward */
+    object-fit: cover; /* Ensures image fills its container */
+    z-index: 2; /* Brings image to the foreground */
+}
+
+.about-description {
+    position: absolute; /* Positioned relative to the parent */
+    left: 38%; /* Moves the description block to the right */
+    top: 20%; /* Pushes the description block downward */
+    width: 50%; /* Takes up 50% of the section width */
+    color: #ffffff; /* White text color */
+    z-index: 1; /* Ensures description sits below the image */
+}
+
+.about-heading {
+    font-size: 2.5rem; /* Large font size */
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    font-weight: lighter; /* Lighter text style */
+    line-height: 1.2; /* Line spacing */
+    margin: 0 0 1rem 0; /* Bottom margin for spacing */
+    color: #ffffff; /* White text color */
+    text-align: left; /* Aligns text to the left */
+}
+
+.about-paragraph {
+    font-size: 1.4rem; /* Readable font size */
+    font-family: 'Poppins', sans-serif; /* Clean sans-serif font */
+    line-height: 1.6; /* Comfortable line spacing */
+    font-weight: lighter; /* Lighter text style */
+    text-align: left; /* Aligns text to the left */
+    color: #ffffff; /* White text color */
+    width: 90%; /* Restricts paragraph width */
+    margin: 0; /* Removes default margin */
+}
+
+/* Divider Lines */
+.lines3 {
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks elements vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    padding: 4rem; /* Adds space around the section */
+}
+
+.lines3 hr {
+    border: none; /* Removes default border styling */
+    border-top: 2px solid #E49CA0; /* Pink divider line */
+    width: 100%; /* Full-width line */
+    margin: 10px 0; /* Adds spacing around the line */
+}
+
+
+
+/* --------------------------------------------------- */
+/* Footer Section */
+/* --------------------------------------------------- */
+#main-footer {
+    background-color: #E9D7C9; /* Light beige background */
+    text-align: center; /* Centers all footer content */
+    padding: 2rem 0; /* Adds vertical padding */
+    color: #4a4a4a; /* Gray text color */
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+}
+
+.footer-title {
+    font-size: 2rem; /* Large font size for the title */
+    font-weight: lighter; /* Lighter text style */
+    margin-bottom: 1rem; /* Adds spacing below the title */
+    color: white; /* White text color */
+}
+
+.footer-navigation .footer-links {
+    list-style: none; /* Removes default list styling */
+    display: flex; /* Aligns links horizontally */
+    justify-content: center; /* Centers the links */
+    gap: 2rem; /* Adds spacing between links */
+    margin-bottom: 2rem; /* Adds spacing below the navigation */
+    padding: 0; /* Removes default padding */
+}
+
+.footer-link {
+    text-decoration: none; /* Removes underline */
+    color: #4F5726; /* Dark green text color */
+    font-size: 1rem; /* Standard font size */
+    font-weight: bold; /* Bold text style */
+}
+
+.footer-link:hover {
+    color: #c48a6b; /* Changes color on hover */
+}
+
+/* Social Media Icons */
+.social-media .social-media-list {
+    list-style: none; /* Removes default list styling */
+    display: flex; /* Aligns icons horizontally */
+    justify-content: center; /* Centers the icons */
+    gap: 1rem; /* Adds spacing between icons */
+    padding-bottom: 2rem; /* Adds spacing below the icons */
+}
+
+.social-media-item a img {
+    max-width: 2rem; /* Restricts image width */
+    max-height: 2rem; /* Restricts image height */
+}
+
+
+
+
+/* --------------------------------------------------- */
+/* About Section */
+/* --------------------------------------------------- */
+.about-section {
+    display: grid; /* Grid layout for profile image and text */
+    grid-template-columns: 25% 1fr; /* 25% for the image, remaining for text */
+    align-items: center; /* Vertically aligns items */
+    background-color: #4F5726; /* Dark green background */
+    color: white; /* White text color */
+    padding: 4rem 4rem; /* Adds spacing around the section */
+    gap: 2rem; /* Space between grid columns */
+}
+
+.about-section img {
+    border-radius: 50%; /* Circular profile image */
+    width: 100%; /* Full width of the container */
+    max-width: 350px; /* Restricts maximum width */
+    height: 350px; /* Fixed height */
+    object-fit: cover; /* Ensures image fits perfectly */
+    justify-self: start; /* Aligns the image to the start of the grid */
+}
+
+.about-section .text-part {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: center; /* Centers content vertically */
+    text-align: left; /* Aligns text to the left */
+    padding: 100px; /* Adds space around the text */
+}
+
+.about-section .about-title {
+    font-size: 3.5rem; /* Large title font size */
+    margin-bottom: 2rem; /* Adds spacing below the title */
+    font-weight: bold; /* Bold text */
+}
+
+.about-section .about-details {
+    line-height: 1.9; /* Improves readability */
+    margin-bottom: 1.5rem; /* Adds spacing below details */
+    font-size: 1.2rem; /* Readable font size */
+}
+
+
+/* --------------------------------------------------- */
+/* 404 Not Found Section */
+/* --------------------------------------------------- */
+.notFound {
+    text-align: center; /* Centers all content */
+    padding: 5rem 2rem; /* Adds vertical and horizontal padding */
+    background-color: #4F5726; /* Dark green background */
+    color: #ffffff; /* White text */
+    height: 400px; /* Fixed section height */
+}
+
+.notFound .notFoundTitle {
+    font-size: 6rem; /* Extra-large title for emphasis */
+    margin-bottom: 1.5rem; /* Spacing below the title */
+    font-weight: bold; /* Bold text for visibility */
+}
+
+.notFound p {
+    font-size: 1.5rem; /* Medium font size */
+    margin-bottom: 2rem; /* Adds spacing below paragraph */
+    font-weight: lighter; /* Lighter text style */
+}
+
+.notFound .backToHomeButton {
+    margin-top: 2rem; /* Adds spacing above the button */
+    display: inline-block; /* Allows block-like behavior */
+    background-color: #E2AF9C; /* Light pink button background */
+    color: white; /* White button text */
+    padding: 1rem 2rem; /* Adds space inside the button */
+    font-size: 1.2rem; /* Standard button font size */
+    text-decoration: none; /* Removes underline */
+    border-radius: 50px; /* Rounded button */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.notFound .backToHomeButton:hover {
+    background-color: #f1a386; /* Changes background color on hover */
+}
+
+
+
+
+/* --------------------------------------------------- */
+/* Recipe Title and Images */
+/* --------------------------------------------------- */
+.recipe-section .recipe-header {
+    text-align: left; /* Aligns title and content to the left */
+    padding: 3rem; /* Adds space around the section */
+    color: white; /* White text color */
+    background-color: #E49CA0; /* Light pink background */
+}
+
+.recipe-section .recipe-header .recipe-section-title {
+    font-size: 2rem; /* Medium font size */
+    margin-bottom: 1rem; /* Adds spacing below the title */
+    font-weight: lighter; /* Lighter text style */
+}
+
+.recipe-section .recipe-header .recipe-ratings {
+    font-size: 1.5rem; /* Medium font size */
+    color: white; /* White text color */
+    margin-bottom: 2rem; /* Adds spacing below ratings */
+}
+
+.recipe-section .recipe-header .recipe-images {
+    display: flex; /* Flexbox layout for images */
+    justify-content: space-around; /* Spreads images evenly */
+}
+
+.recipe-section .recipe-header .recipe-images img {
+    width: 300px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    border-radius: 0px; /* Removes rounded corners */
+    object-fit: cover; /* Ensures image fits the container */
+}
+  
+/* --------------------------------------------------- */
+/* Recipe Ingredients and Instructions Section */
+/* --------------------------------------------------- */
+.recipe-section .recipe-details {
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-between; /* Distributes ingredients and instructions evenly */
+    gap: 2rem; /* Adds spacing between the two columns */
+    padding: 3rem; /* Adds space around the section */
+    background-color: #E49CA0; /* Light pink background color */
+    padding-bottom: 4rem; /* Extra spacing at the bottom */
+}
+
+.recipe-section .recipe-details .recipe-ingredients,
+.recipe-section .recipe-details .recipe-instructions {
+    flex: 1; /* Equal width for both columns */
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 2rem; /* Adds space inside each box */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.recipe-section .recipe-details h3 {
+    font-size: 1.5rem; /* Medium font size for headings */
+    color: #4f5726; /* Dark green text color */
+    margin-bottom: 1rem; /* Adds spacing below the heading */
+}
+
+.recipe-section .recipe-details ul,
+.recipe-section .recipe-details ol {
+    font-size: 1rem; /* Standard font size for lists */
+    color: #333333; /* Dark gray text color */
+    line-height: 1.5; /* Improves readability */
+    padding-left: 2rem; /* Indents list items */
+}
+
+.recipe-section .recipe-details ul li,
+.recipe-section .recipe-details ol li {
+    margin-bottom: 1rem; /* Adds spacing between list items */
+}
+
+/* --------------------------------------------------- */
+/* Recipe Background Colors for Different Recipes */
+/* --------------------------------------------------- */
+#recipe-header-pancake, #recipe-details-pancake {
+    background-color: #E49CA0; /* Pink background for Pancake section */
+}
+
+#recipe-header-brownie, #recipe-details-brownie {
+    background-color: #D7812A; /* Orange background for Brownie section */
+}
+
+#recipe-header-carbonara, #recipe-details-carbonara {
+    background-color: #E2AF9C; /* Light peach background for Carbonara section */
+}
+
+
+
+/* --------------------------------------------------- */
+/* Comment Section */
+/* --------------------------------------------------- */
+.comment-container {
+    display: flex; /* Flexbox for vertical layout */
+    flex-direction: column; /* Stacks child elements vertically */
+    align-items: center; /* Centers content horizontally */
+    margin: 4rem 5rem; /* Adds spacing around the section */
+    background-color: #C6C45D; /* Light yellow-green background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+}
+
+.comment-title {
+    font-size: 2rem; /* Large title font size */
+    color: #4F5726; /* Dark green text color */
+    margin-bottom: 1rem; /* Spacing below the title */
+    margin-top: 1.5rem; /* Spacing above the title */
+    text-align: center; /* Centers the title text */
+}
+
+.comment-form {
+    display: flex; /* Flexbox for vertical layout */
+    flex-direction: column; /* Stacks input and textarea vertically */
+    align-items: center; /* Centers form elements horizontally */
+    padding: 1rem; /* Adds padding around the form */
+    padding-top: 0rem; /* Removes extra top padding */
+    width: 100%; /* Full width of container */
+    max-width: 500px; /* Restricts maximum width */
+}
+
+.comment-input {
+    width: 30%; /* Restricts width of input fields */
+    padding: 0.75rem; /* Adds space inside the input */
+    border: none; /* Removes border */
+    border-radius: 25px; /* Rounded corners */
+    margin-bottom: 1.5rem; /* Adds spacing below each input */
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark gray text color */
+    height: 1rem; /* Sets input field height */
+    resize: none; /* Disables resizing */
+}
+
+.comment-textarea {
+    width: 100%; /* Full width */
+    padding: 0.75rem; /* Adds space inside the textarea */
+    border: none; /* Removes border */
+    border-radius: 25px; /* Rounded corners */
+    margin-bottom: 1.5rem; /* Adds spacing below the textarea */
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark gray text color */
+    height: 6rem; /* Fixed height for textarea */
+    resize: none; /* Disables resizing */
+}
+
+
+/* --------------------------------------------------- */
+/* blog navigation button */
+/* --------------------------------------------------- */
+/* Base Navigation Buttons Styling */
+.navigation-buttons {
+    background: inherit; /* Inherit background from parent class */
+    width: 100%; /* Full width container */
+    position: relative; /* Relative positioning for absolute child elements */
+    height: 100px; /* Fixed height */
+    display: flex; /* Layout for buttons */
+    align-items: center; /* Align buttons vertically */
+}
+
+/* Specific Backgrounds for Each Page */
+.pancake-bg {
+    background-color: #E49CA0; /* Pink background for Pancake page */
+}
+
+.brownie-bg {
+    background-color: #D7812A; /* Orange background for Brownie page */
+}
+
+.carbonara-bg {
+    background-color: #E2AF9C; /* Beige background for Carbonara page */
+}
+
+/* Button Styling */
+.previous-btn,
+.next-btn {
+    background-color: #4F5726; /* Dark green button background */
+    color: white; /* White text color */
+    font-size: 1rem; /* Standard font size */
+    font-weight: bold; /* Bold text */
+    padding: 0.75rem 2rem; /* Padding inside the button */
+    border: none; /* Removes button borders */
+    border-radius: 50px; /* Makes the button rounded */
+    text-decoration: none; /* Removes underline */
+    position: absolute; /* Position buttons within the parent container */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Position Buttons */
+.previous-btn {
+    left: 2rem; /* Aligns the button to the left edge */
+}
+
+.next-btn {
+    right: 2rem; /* Aligns the button to the right edge */
+}
+
+/* Hover Effects */
+.previous-btn:hover,
+.next-btn:hover {
+    background-color: #4F5726; /* Darker green on hover */
+    color: #E49CA0;
+}
